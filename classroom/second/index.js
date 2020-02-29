@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     
     const getUsers = () => {
+        const spinner = document.getElementsByClassName('lds-ring')[0];
         fetch('https://api.github.com/users?since=135')
             .then((response) => {
                 return response.json();
@@ -38,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .then((jsonData) => {
                 users = jsonData;
                 console.log(users);
+                spinner.classList.add('hide');
                 showUsers();
             });
     };
@@ -51,12 +53,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 users = [...users, user];
                 console.log(users);
                 showUsers();
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
             });
     };
     
     const handleAddUserBtn = () => {
         const btn = document.getElementById('addUser');
-        document.addEventListener('click', () => {
+        btn.addEventListener('click', () => {
             addCustomUser();
             btn.setAttribute("style", "display:none;");
         }, { once: true });

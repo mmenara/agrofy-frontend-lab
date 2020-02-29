@@ -12,6 +12,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 20px;
+    min-height: 30vh;
+    align-items: center;
 }
 
 #users>.user {
@@ -49,7 +52,7 @@ header {
     border-radius: 7px;
 }
 
-#menu ~ nav {
+#menu~nav {
     display: none;
     position: absolute;
     top: 70px;
@@ -60,7 +63,7 @@ header {
     min-height: 50vh;
 }
 
-#menu.open ~ nav {
+#menu.open~nav {
     display: flex;
     position: absolute;
 }
@@ -71,10 +74,14 @@ header {
     color: #3F51B5;
 }
 
-nav > ul > a {
+nav>ul>li>a {
     text-decoration: none;
     color: black;
     font-weight: 300;
+}
+
+nav>ul>li>a:hover {
+    color: #3F51B5;
 }
 
 h1 {
@@ -87,6 +94,7 @@ h1 {
 main {
     padding: 20px;
     text-align: center;
+    min-height: calc(100vh - 145px)
 }
 
 footer {
