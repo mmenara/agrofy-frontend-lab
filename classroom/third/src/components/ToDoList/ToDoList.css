@@ -1,0 +1,50 @@
+.todo {
+  width: 50vw;
+  margin: auto;
+  padding: 20px;
+  background-color: #68afe326;
+  margin-top: 50px;
+  border-radius: 10px;
+  min-height: 60vh;
+}
+
+.todo>h2 {
+  border-bottom: 1px solid #6b778e;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.todo>ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.todo>ul>li {
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.todo__input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+}
+
+.btn {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+}
+.btn:hover {
+  opacity: 0.8;
+}
