@@ -20,31 +20,9 @@
   list-style: none;
 }
 
-.todo>ul>li {
-  background: white;
-  padding: 10px;
-  border-radius: 5px;
-  display: flex;
-  margin-bottom: 5px;
-  align-items: center;
-  justify-content: space-between;
-}
-
-
 .todo__input {
   padding: 10px;
   border-radius: 5px;
   border: none;
   margin-right: 10px;
-}
-
-.btn {
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: #4CAF50;
-  color: white;
-}
-.btn:hover {
-  opacity: 0.8;
 }

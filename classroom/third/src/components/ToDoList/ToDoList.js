@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './ToDoList.css';
+import ListItem from '../ListItem/ListItem';
+import Button from '../Button/Button';
 
 const ToDoList = () => {
   const [newItem, setNewItem] = useState('');
@@ -22,14 +24,7 @@ const ToDoList = () => {
     <div className="todo">
       <h2>To do list</h2>
       <ul>
-        {
-          list.map(item =>
-            <li key={item}>
-              {item}
-              <input type='checkbox'></input>
-            </li>
-          )
-        }
+        { list.map(item => <ListItem item={item}/>)}
       </ul>
       <div className="todo__add">
         <h3>Add new item:</h3>
@@ -38,12 +33,7 @@ const ToDoList = () => {
           type='text'
           value={newItem}
           onChange={event => setNewItem(event.target.value)} />
-        <button
-          className="btn"
-          disabled={!validate()}
-          onClick={() => addNew()}>
-            Add +
-        </button>
+        <Button isDisabled={!validate()} callback={() => addNew()} label={'Add +'}></Button>
       </div>
     </div>
   );
