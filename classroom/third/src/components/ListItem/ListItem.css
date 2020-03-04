@@ -1,0 +1,9 @@
+li {
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: space-between;
+}
